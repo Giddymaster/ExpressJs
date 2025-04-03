@@ -17,8 +17,10 @@ model TaskItem{
   id String @id @default(uuid())
   taskTitle String
   taskDescription String
-  isComplete Boolean
+  isComplete Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("tasks_table")
 }
 
